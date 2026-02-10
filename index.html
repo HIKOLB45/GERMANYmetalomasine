@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>germanymetalomasine | Silver Exchange</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dark">
+
+<header>
+  <div class="logo">
+    <h1>germanymetalomasine</h1>
+    <span>XAG / USD • Silver Market</span>
+  </div>
+
+  <div class="top-info">
+    <div id="price">$100.00</div>
+    <button onclick="toggleTheme()">🌗</button>
+    <button onclick="toggleFullscreen()">⛶</button>
+  </div>
+</header>
+
+<nav class="toolbar">
+  <div class="left">
+    <button onclick="setSpeed(1)">1m</button>
+    <button onclick="setSpeed(3)">5m</button>
+    <button onclick="setSpeed(6)">15m</button>
+    <button onclick="setSpeed(12)">1h</button>
+  </div>
+  <div class="right">
+    <label><input type="checkbox" checked onchange="toggleMA(20)"> MA20</label>
+    <label><input type="checkbox" checked onchange="toggleMA(50)"> MA50</label>
+    <label><input type="checkbox" checked onchange="toggleEMA()"> EMA</label>
+  </div>
+</nav>
+
+<main>
+  <section class="chart-section">
+    <div id="chart"></div>
+    <div id="rsi"></div>
+  </section>
+
+  <aside class="side">
+    <div class="panel">
+      <h3>Order Book</h3>
+      <div id="orderbook"></div>
+    </div>
+
+    <div class="panel">
+      <h3>Trades</h3>
+      <div id="trades"></div>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  Demo exchange • Indicative prices • germanymetalomasine
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
